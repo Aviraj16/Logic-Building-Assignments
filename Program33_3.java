@@ -1,0 +1,36 @@
+import java.util.*;
+
+class Digit
+{
+    int iDigit = 0,iCnt = 0;
+    public int CountOdd(int iNo)
+    {
+        while(iNo != 0) 
+        {
+            iDigit = iNo %10;
+            if(iDigit>3 && iDigit<7)
+            {
+                iCnt++;
+            }
+            iNo = iNo / 10;
+        }
+        return iCnt;
+    }
+}
+
+class Program33_3
+{
+    public static void main(String arg[])
+    {
+        Scanner sobj = new Scanner(System.in);
+
+        Digit dobj = new Digit();
+
+        System.out.println("Enter element");
+        int  iNo = sobj.nextInt();
+
+        int iRet =dobj.CountOdd(iNo);
+        System.out.println(iRet);
+        
+    }
+}
